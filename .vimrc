@@ -1,7 +1,12 @@
+" ================/ PLUGINS =================== "
+
+" ================/ UI 	    =================== "
 " Use the Solarized Dark theme
 set background=dark
 colorscheme solarized
 let g:solarized_termtrans=1
+
+" ================/ GENERAL =================== "
 
 " Make Vim more useful
 set nocompatible
@@ -24,15 +29,14 @@ let mapleader=","
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
-" Centralize backups, swapfiles and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
+
+" ================/ SETUPS =================== "
+set nobackup       "no backup files
+set nowritebackup  "only in case you don't want a backup file while editing
+set noswapfile     "no swap files
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
-
-" Don’t create backups when editing files in certain directories
-set backupskip=/tmp/*,/private/tmp/*
 
 " Respect modeline in files
 set modeline
@@ -48,9 +52,7 @@ syntax on
 set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
-" Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list
+
 " Highlight searches
 set hlsearch
 " Ignore case of searches
