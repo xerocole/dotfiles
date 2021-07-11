@@ -1,10 +1,12 @@
 " ================/ PLUGINS =================== "
-
+execute pathogen#infect()
+filetype plugin indent on
 " ================/ UI 	    =================== "
 " Use the Solarized Dark theme
 set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
+
+autocmd ColorScheme janah highlight Normal ctermbg=235
+colorscheme janah
 
 " ================/ GENERAL =================== "
 
